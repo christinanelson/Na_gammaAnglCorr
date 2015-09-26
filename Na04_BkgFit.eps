@@ -1,0 +1,86 @@
+{
+//========= Macro generated from object: histo/Na_4cm gamma angular correlation
+//========= by ROOT version6.04/02
+   
+   TH1F *histo__1 = new TH1F("histo__1","Na_4cm gamma angular correlation",37,90,270);
+   histo__1->SetBinContent(1,9);
+   histo__1->SetBinContent(3,7);
+   histo__1->SetBinContent(5,2);
+   histo__1->SetBinContent(7,15);
+   histo__1->SetBinContent(9,10);
+   histo__1->SetBinContent(11,6);
+   histo__1->SetBinContent(13,9);
+   histo__1->SetBinContent(14,12);
+   histo__1->SetBinContent(15,16);
+   histo__1->SetBinContent(16,35);
+   histo__1->SetBinContent(17,41);
+   histo__1->SetBinContent(18,52);
+   histo__1->SetBinContent(19,42);
+   histo__1->SetBinContent(20,45);
+   histo__1->SetBinContent(21,43);
+   histo__1->SetBinContent(22,49);
+   histo__1->SetBinContent(23,40);
+   histo__1->SetBinContent(24,25);
+   histo__1->SetBinContent(25,16);
+   histo__1->SetBinContent(26,9);
+   histo__1->SetBinContent(27,8);
+   histo__1->SetBinContent(28,13);
+   histo__1->SetBinContent(29,8);
+   histo__1->SetBinContent(31,4);
+   histo__1->SetBinContent(34,10);
+   histo__1->SetBinContent(37,11);
+   histo__1->SetEntries(37);
+   histo__1->SetStats(0);
+   
+   TF1 *myfunc1 = new TF1("myfunc","[0] / sqrt(2.0 * TMath::Pi()) / [2] * exp(-(x - [1]) * (x - [1])/2./[2]/[2]) + [3]",90,270);
+   myfunc1->SetFillColor(19);
+   myfunc1->SetFillStyle(0);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#00ffff");
+   myfunc1->SetLineColor(ci);
+   myfunc1->SetChisquare(73.4056);
+   myfunc1->SetNDF(23);
+   myfunc1->GetXaxis()->SetLabelFont(42);
+   myfunc1->GetXaxis()->SetLabelSize(0.035);
+   myfunc1->GetXaxis()->SetTitleSize(0.035);
+   myfunc1->GetXaxis()->SetTitleFont(42);
+   myfunc1->GetYaxis()->SetLabelFont(42);
+   myfunc1->GetYaxis()->SetLabelSize(0.035);
+   myfunc1->GetYaxis()->SetTitleSize(0.035);
+   myfunc1->GetYaxis()->SetTitleFont(42);
+   myfunc1->SetParameter(0,1267.33);
+   myfunc1->SetParError(0,90.8599);
+   myfunc1->SetParLimits(0,0,0);
+   myfunc1->SetParameter(1,183.008);
+   myfunc1->SetParError(1,0);
+   myfunc1->SetParLimits(1,100,90);
+   myfunc1->SetParameter(2,10);
+   myfunc1->SetParError(2,0.065548);
+   myfunc1->SetParLimits(2,0.1,10);
+   myfunc1->SetParameter(3,7.81324);
+   myfunc1->SetParError(3,0.653767);
+   myfunc1->SetParLimits(3,0,10);
+   histo__1->GetListOfFunctions()->Add(myfunc1);
+
+   ci = TColor::GetColor("#000099");
+   histo__1->SetLineColor(ci);
+   histo__1->SetMarkerStyle(21);
+   histo__1->SetMarkerSize(0.8);
+   histo__1->GetXaxis()->SetTitle("angle #theta (degrees)");
+   histo__1->GetXaxis()->SetLabelFont(42);
+   histo__1->GetXaxis()->SetLabelSize(0.035);
+   histo__1->GetXaxis()->SetTitleSize(0.035);
+   histo__1->GetXaxis()->SetTitleFont(42);
+   histo__1->GetYaxis()->SetTitle("Coincidence Counts");
+   histo__1->GetYaxis()->SetLabelFont(42);
+   histo__1->GetYaxis()->SetLabelSize(0.035);
+   histo__1->GetYaxis()->SetTitleSize(0.035);
+   histo__1->GetYaxis()->SetTitleFont(42);
+   histo__1->GetZaxis()->SetLabelFont(42);
+   histo__1->GetZaxis()->SetLabelSize(0.035);
+   histo__1->GetZaxis()->SetTitleSize(0.035);
+   histo__1->GetZaxis()->SetTitleFont(42);
+   histo__1->Draw("");
+}
